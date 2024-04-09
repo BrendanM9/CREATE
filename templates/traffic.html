@@ -2,11 +2,15 @@
 <html lang="en">
     <head>
         <meta charset = "UTF-8">
-        <title>TEST SITE</title>
+        <title>Traffic details</title>
     </head>
     <body>
+        <a href="/">Choose a new city</a>
         <h1>Traffic for {{ city }}</h1>
         <!--<p>{{ tripCheckData }} </p>-->
+        <p hidden>{{ camInfo }}</p>
+        <p hidden>{{ dmsInfo }}</p>
+        <p hidden>{{ weatherInfo }}</p>
         <img src="{{ camLink }}">
         <p>{{ dms1 }}</p>
         <p>{{ dms2 }}</p>
@@ -14,6 +18,11 @@
         <p>{{ dms4 }}</p>
         <p>{{ dms5 }}</p>
         <p>{{ dms6 }}</p>
+        <ul>
+            <li>{{ desc }}</li>
+            <li>{{ temp }}</li>
+            <li>{{ dew }}</li>
+        </ul>
         <script>
             /*
             const tripCheckAPI = "a036194717464c84a1d0d623a518ed57";
