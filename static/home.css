@@ -1,0 +1,25 @@
+body {
+    height: 100%;
+    background-image: url('background.png');
+    background-size: 100% 100%;
+}
+html {
+    height: 100%;
+}
+#welcome{
+    position: absolute;
+    color:green;
+    text-align: center;
+    width:30%;
+    height:10%;
+    left:35%;
+    top:35%;
+}
+#cityPicker{
+    position: absolute;
+    text-align: center;
+    width:30%;
+    left:35%;
+    top:50%;
+    color:green;
+}

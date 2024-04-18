@@ -3,27 +3,43 @@
     <head>
         <meta charset = "UTF-8">
         <title>Traffic details</title>
+        <link rel="stylesheet" href="/static/traffic.css">
     </head>
     <body>
-        <a href="/">Choose a new city</a>
+        <a href="/" id="button">Choose a new city</a>
         <h1>Traffic for {{ city }}</h1>
         <!--<p>{{ tripCheckData }} </p>-->
         <p hidden>{{ camInfo }}</p>
         <p hidden>{{ dmsInfo }}</p>
         <p hidden>{{ weatherInfo }}</p>
         <img src="{{ camLink }}">
+        <div id="dms">
         <p>{{ dms1 }}</p>
         <p>{{ dms2 }}</p>
         <p>{{ dms3 }}</p>
         <p>{{ dms4 }}</p>
         <p>{{ dms5 }}</p>
         <p>{{ dms6 }}</p>
-        <ul>
-            <li>{{ desc }}</li>
-            <li>{{ temp }}</li>
-            <li>{{ dew }}</li>
+        </div>
+        <ul id="weather">
+            <h2>Weather Conditions:</h2>
+            <li id="1">{{ desc }}</li>
+            <li id="2">{{ temp }}</li>
+            <li id="3">{{ dew }}</li>
+            <li id="4">{{ precipitation }}</li>
+            <li id="5">{{ wind }}</li>
         </ul>
         <script>
+            var weatherNames = ["Condition:", "Temperature: ", "Dew Point: "]
+            for(var i = 1; i <= 5; i++){
+                console.log(weatherNames.includes("Condition: "))
+                var iterated = document.getElementById(i)
+                var typeWeather = iterated.innerText
+                console.log(typeWeather)
+                if(weatherNames.includes(typeWeather)=== true){
+                    iterated.style.display = "None"
+                }
+            }
             /*
             const tripCheckAPI = "a036194717464c84a1d0d623a518ed57";
             function trafficCam(camID) {

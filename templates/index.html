@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta charset = "UTF-8">
-        <title>TEST SITE</title>
+        <title>Traffic Homepage</title>
+        <link rel="stylesheet" href="static/home.css">
     </head>
     <body>
-        <h1>Welcome to Oregon Traffic</h1>
-        <form action="/confirm", method = "post">
+        <h1 id="welcome">Welcome to Oregon Traffic</h1>
+        <form action="/confirm", method = "post" id="cityPicker">
+            <h4>Please select a city</h4>
             <select id="cityName" name="cityName">
                 <option></option>
                 <option value="bend">Bend</option>
